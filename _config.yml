@@ -1,0 +1,12 @@
+title: ತಂತ್ರಾಲೋಕ
+description: ಅಭಿನವಗುಪ್ತರ ತಂತ್ರಾಲೋಕದ ಮೂಲಪಾಠ ಮತ್ತು ಕನ್ನಡ ವಿವರಣೆ
+lang: kn
+url: https://vijnasu.github.io
+baseurl: /Tantraloka
+permalink: /:basename/
+markdown: kramdown
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
