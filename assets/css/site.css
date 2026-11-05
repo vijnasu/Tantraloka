@@ -288,6 +288,12 @@ input:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 
+.empty-row {
+  padding: 14px 2px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .document-row[hidden] {
   display: none;
 }

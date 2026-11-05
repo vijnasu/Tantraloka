@@ -7,8 +7,7 @@ description: ಅಭಿನವಗುಪ್ತರ ತಂತ್ರಾಲೋಕದ �
 <section class="intro" aria-labelledby="page-title">
   <p class="eyebrow">ಕಾಶ್ಮೀರ ಶೈವದರ್ಶನ · ಡಿಜಿಟಲ್ ಪಠ್ಯ</p>
   <h1 id="page-title">ತಂತ್ರಾಲೋಕ</h1>
-  <p class="intro-copy">ಅಭಿನವಗುಪ್ತರ ಶೈವದರ್ಶನದ ಮಹಾಗ್ರಂಥ. ಲಭ್ಯವಿರುವ ಶ್ಲೋಕಗಳು, ಕನ್ನಡ ಭಾವಾರ್ಥ ಮತ್ತು ವಿವರಣೆಗಳನ್ನು ಇಲ್ಲಿ ಓದಿ.</p>
-  <a class="text-link" href="{{ '/intro/' | relative_url }}">ಗ್ರಂಥ ಪರಿಚಯ <span aria-hidden="true">↗</span></a>
+  <p class="intro-copy">ಅಭಿನವಗುಪ್ತರ ಶೈವದರ್ಶನದ ಮಹಾಗ್ರಂಥ. ಪಠ್ಯವನ್ನು ಅಧ್ಯಾಯವಾರು ಇಲ್ಲಿ ಸೇರಿಸಲಾಗುವುದು.</p>
 </section>
 
 <section class="library" aria-labelledby="library-title">
@@ -37,6 +36,7 @@ description: ಅಭಿನವಗುಪ್ತರ ತಂತ್ರಾಲೋಕದ �
             <a href="{{ page.url | relative_url }}"><span class="document-title">ಶ್ಲೋಕಗಳು {{ range }}</span><span class="document-status">{% if page.content contains 'ಅನುವಾದ ಬಾಕಿ' %}ಅನುವಾದ ಬಾಕಿ{% else %}ಪಠ್ಯ ಲಭ್ಯ{% endif %}</span><span class="row-arrow" aria-hidden="true">↗</span></a>
           </li>
         {% endfor %}
+        {% if verse_pages.size == 0 %}<li class="empty-row">ಶ್ಲೋಕಗಳ ಪುಟಗಳನ್ನು ಸೇರಿಸಿದಾಗ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ.</li>{% endif %}
       </ul>
     </section>
 
@@ -52,14 +52,11 @@ description: ಅಭಿನವಗುಪ್ತರ ತಂತ್ರಾಲೋಕದ �
             <a href="{{ page.url | relative_url }}"><span class="document-title">ಶ್ಲೋಕಗಳು {{ range }}</span><span class="document-status">{% if page.content contains 'ಅನುವಾದ ಬಾಕಿ' %}ಅನುವಾದ ಬಾಕಿ{% else %}ಪಠ್ಯ ಲಭ್ಯ{% endif %}</span><span class="row-arrow" aria-hidden="true">↗</span></a>
           </li>
         {% endfor %}
+        {% if stanza_pages.size == 0 %}<li class="empty-row">ಅಧ್ಯಾಯಗಳ ಪುಟಗಳನ್ನು ಸೇರಿಸಿದಾಗ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ.</li>{% endif %}
       </ul>
     </section>
   </div>
   <p class="empty-state" id="empty-state" hidden>ಹೊಂದುವ ವಿಭಾಗ ಕಂಡುಬಂದಿಲ್ಲ.</p>
-</section>
-
-<section class="references" aria-label="ಹೆಚ್ಚುವರಿ ಓದು">
-  <a href="{{ '/further-information/' | relative_url }}"><span>ಗ್ರಂಥ ಮತ್ತು ಪಾಠದ ಕುರಿತು</span><span aria-hidden="true">↗</span></a>
 </section>
 
 <script>
