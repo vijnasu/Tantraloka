@@ -1,3 +1,8 @@
+---
+layout: default
+title: further-information
+---
+
 # ಹೆಚ್ಚುವರಿ ಮಾಹಿತಿ
 
 [← ಪ್ರಥಮ ಆಹ್ನಿಕದ ವಿಷಯಸೂಚಿ](stanzas-001-150.md)

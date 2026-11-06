@@ -3,10 +3,14 @@ description: ಅಭಿನವಗುಪ್ತರ ತಂತ್ರಾಲೋಕದ �
 lang: kn
 url: https://vijnasu.github.io
 baseurl: /Tantraloka
-permalink: /:basename/
+permalink: /:path/
 markdown: kramdown
 plugins:
   - jekyll-relative-links
 relative_links:
   enabled: true
   collections: false
+exclude:
+  - chapters
+include:
+  - chapters

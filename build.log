@@ -1,0 +1,7 @@
+Configuration file: /workspaces/Tantraloka/_config.yml
+            Source: /workspaces/Tantraloka
+       Destination: /workspaces/Tantraloka/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.108 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
