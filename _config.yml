@@ -10,3 +10,8 @@ plugins:
 relative_links:
   enabled: true
   collections: false
+# README.md is the GitHub-facing landing page (shown on github.com); the
+# Jekyll site uses index.md as its home page instead, so keep README.md
+# out of the generated site to avoid a duplicate, unstyled page.
+exclude:
+  - README.md

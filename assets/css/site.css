@@ -166,6 +166,12 @@ input:focus-visible {
   line-height: 1.35;
 }
 
+.intro h1 small {
+  color: var(--leaf);
+  font-size: 0.5em;
+  font-weight: 500;
+}
+
 .intro-copy {
   max-width: 700px;
   margin: 15px 0 22px;
@@ -176,6 +182,8 @@ input:focus-visible {
 }
 
 .text-link {
+  display: inline-flex;
+  align-items: center;
   color: var(--copper);
   font-size: 14px;
   font-weight: 700;
@@ -186,6 +194,43 @@ input:focus-visible {
 .text-link span {
   display: inline-block;
   margin-left: 4px;
+  transition: transform 160ms ease;
+}
+
+.text-link:hover span {
+  transform: translateX(3px);
+}
+
+.status-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 26px 0 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-done {
+  color: var(--forest);
+  background: #e1ecd9;
+}
+
+.badge-pending {
+  color: #7a4a30;
+  background: var(--rose);
+}
+
+.intro-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .library {
@@ -318,6 +363,15 @@ input:focus-visible {
   white-space: nowrap;
 }
 
+.document-row[data-status="done"] .document-status {
+  color: var(--leaf);
+  font-weight: 600;
+}
+
+.document-row[data-status="pending"] .document-status {
+  color: #a4694a;
+}
+
 .row-arrow {
   color: var(--copper);
   font-size: 15px;
@@ -380,8 +434,15 @@ input:focus-visible {
   font-size: 23px;
 }
 
+.page-shell:not(.home-shell) > h3 {
+  margin-top: 28px;
+  font-size: 19px;
+}
+
 .page-shell:not(.home-shell) > p,
-.page-shell:not(.home-shell) > blockquote {
+.page-shell:not(.home-shell) > blockquote,
+.page-shell:not(.home-shell) > ul,
+.page-shell:not(.home-shell) > ol {
   max-width: 760px;
   font-family: var(--serif);
   font-size: 17px;
@@ -396,9 +457,48 @@ input:focus-visible {
   background: rgb(255 255 255 / 55%);
 }
 
+.page-shell:not(.home-shell) > blockquote > :first-child {
+  margin-top: 0;
+}
+
+.page-shell:not(.home-shell) > blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.page-shell:not(.home-shell) > ul,
+.page-shell:not(.home-shell) > ol {
+  margin: 18px 0;
+  padding-left: 28px;
+}
+
+.page-shell:not(.home-shell) li {
+  margin: 10px 0;
+}
+
+.page-shell:not(.home-shell) li::marker {
+  color: var(--copper);
+}
+
+.page-shell:not(.home-shell) > hr {
+  width: 84px;
+  height: 3px;
+  margin: 42px 0;
+  border: 0;
+  background: var(--copper);
+}
+
+.page-shell:not(.home-shell) strong {
+  color: var(--forest);
+}
+
 .page-shell:not(.home-shell) a {
-  text-decoration-color: #9daea2;
+  color: var(--copper);
+  text-decoration-color: #c9a390;
   text-underline-offset: 4px;
+}
+
+.page-shell:not(.home-shell) a:hover {
+  text-decoration-color: var(--copper);
 }
 
 .site-footer {
@@ -497,8 +597,15 @@ input:focus-visible {
   }
 
   .page-shell:not(.home-shell) > p,
-  .page-shell:not(.home-shell) > blockquote {
+  .page-shell:not(.home-shell) > blockquote,
+  .page-shell:not(.home-shell) > ul,
+  .page-shell:not(.home-shell) > ol {
     font-size: 16px;
+  }
+
+  .page-shell:not(.home-shell) > ul,
+  .page-shell:not(.home-shell) > ol {
+    padding-left: 22px;
   }
 }
 
